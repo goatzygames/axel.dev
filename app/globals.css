@@ -48,6 +48,7 @@ img {
 
 .page-shell {
   min-height: 100vh;
+  position: relative;
 }
 
 .site-frame {
@@ -259,6 +260,140 @@ img {
   background: rgba(255, 255, 255, 0.45);
 }
 
+.setup-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.setup-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.setup-form {
+  display: grid;
+  gap: 1rem;
+}
+
+.form-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.form-field {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.text-input,
+.text-area {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 0;
+  background: rgba(255, 255, 255, 0.82);
+  color: var(--text);
+  padding: 0.78rem 0.85rem;
+  font: inherit;
+}
+
+.text-area {
+  resize: vertical;
+}
+
+.text-input:focus,
+.text-area:focus,
+.terminal-input:focus {
+  outline: 2px solid var(--accent-soft);
+  border-color: var(--accent);
+}
+
+.checkbox-field {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.setup-success {
+  margin: 0;
+  color: var(--accent);
+}
+
+.terminal-overlay {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: end center;
+  padding: 1rem;
+  background: rgba(10, 13, 18, 0.18);
+  z-index: 50;
+}
+
+.terminal-window {
+  width: min(100%, 36rem);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #111418;
+  color: #eef2f7;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+}
+
+.terminal-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.7rem 0.9rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  color: rgba(238, 242, 247, 0.72);
+  font-family: "SFMono-Regular", "SF Mono", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 0.82rem;
+}
+
+.terminal-close {
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.terminal-body {
+  padding: 1rem 0.9rem 1.1rem;
+  font-family: "SFMono-Regular", "SF Mono", Consolas, "Liberation Mono", Menlo, monospace;
+}
+
+.terminal-line {
+  margin: 0 0 0.35rem;
+}
+
+.terminal-form {
+  margin-top: 0.8rem;
+}
+
+.terminal-input-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.terminal-input {
+  flex: 1;
+  border: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+  color: inherit;
+  padding: 0.55rem 0;
+  font: inherit;
+}
+
+.terminal-error {
+  margin: 0.8rem 0 0;
+  color: #f0a8a0;
+}
+
 .steps-list {
   margin: 0;
   padding-left: 1.25rem;
@@ -302,6 +437,11 @@ img {
     grid-template-columns: minmax(0, 2fr) minmax(16rem, 1fr);
     align-items: start;
   }
+
+  .setup-grid,
+  .form-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 640px) {
@@ -317,5 +457,9 @@ img {
 
   .hero {
     padding-top: 3rem;
+  }
+
+  .setup-head {
+    flex-direction: column;
   }
 }

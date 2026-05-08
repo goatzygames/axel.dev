@@ -2,6 +2,12 @@ import { getDb } from "@/lib/db";
 import { seedProjects } from "@/db/seed-projects";
 
 export type ProjectStatus = "Alpha" | "Finished" | "Prototype" | "Archived";
+export const projectStatuses: ProjectStatus[] = [
+  "Alpha",
+  "Finished",
+  "Prototype",
+  "Archived"
+];
 
 export type Project = {
   id: number | null;

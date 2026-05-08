@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { SetupTerminal } from "@/components/setup-terminal";
 import { siteConfig } from "@/lib/site";
 import "./globals.css";
 
@@ -42,6 +43,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             <main className="main-content">{children}</main>
             <SiteFooter />
           </div>
+          <SetupTerminal />
         </div>
       </body>
     </html>
