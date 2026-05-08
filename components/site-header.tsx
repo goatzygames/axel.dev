@@ -3,6 +3,7 @@ import { siteConfig } from "@/lib/site";
 
 const navItems = [
   { href: "/work", label: "Work" },
+  { href: "/setup", label: "Setup" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
   { href: siteConfig.githubUrl, label: "GitHub", external: true }

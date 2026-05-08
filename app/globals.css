@@ -242,6 +242,32 @@ img {
   padding: 0.75rem;
 }
 
+.code-block {
+  margin: 0;
+  padding: 1rem 1.1rem;
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.62);
+  font-family: "SFMono-Regular", "SF Mono", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.note-block {
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.steps-list {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.steps-list li + li {
+  margin-top: 0.75rem;
+}
+
 .minimal-button {
   display: inline-flex;
   align-items: center;
